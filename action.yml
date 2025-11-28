@@ -143,7 +143,7 @@ runs:
 
     - name: Deploy to Railway
       if: inputs.railway_token != '' && inputs.railway_service_id != '' && inputs.railway_environment_id != ''
-      uses: xngen-ai/railway-deploy-image@v1
+      uses: xngen-ai/railway-deploy-image@v3
       with:
         railway_token: ${{ inputs.railway_token }}
         image_url: "${{ steps.image_info.outputs.IMAGE_FULL_NAME }}:${{ steps.image_info.outputs.IMAGE_TAG }}"
