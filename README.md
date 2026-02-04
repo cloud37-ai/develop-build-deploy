@@ -2,12 +2,12 @@
 
 This composite GitHub Action builds and pushes a container image to GitHub Container Registry with automatic versioning support. It also optionally supports deployment to Railway.
 
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/xngen-ai/develop-build-deploy)](https://github.com/xngen-ai/develop-build-deploy/releases)
-[![GitHub](https://img.shields.io/github/license/xngen-ai/develop-build-deploy)](https://github.com/xngen-ai/develop-build-deploy/blob/main/LICENSE)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/cloud37-ai/develop-build-deploy)](https://github.com/cloud37-ai/develop-build-deploy/releases)
+[![GitHub](https://img.shields.io/github/license/cloud37-ai/develop-build-deploy)](https://github.com/cloud37-ai/develop-build-deploy/blob/main/LICENSE)
 
 ## Overview
 
-This action is maintained by [XnGen AI](https://github.com/xngen-ai) and combines several common container workflow steps into a single, reusable action.
+This action is maintained by [Cloud37 AI](https://github.com/cloud37-ai) and combines several common container workflow steps into a single, reusable action.
 
 ## Features
 
@@ -47,7 +47,7 @@ jobs:
       - uses: actions/checkout@v4
       
       - name: Build and Push Container
-        uses: xngen-ai/develop-build-deploy@v1
+        uses: cloud37-ai/develop-build-deploy@v2
         with:
           image_name: my-app
           image_title: My Application
@@ -75,7 +75,7 @@ jobs:
 ### Optional
 
 - `registry`: Container registry to push to (default: 'ghcr.io')
-- `org_name`: Organization name for the container registry (default: 'xngen-ai')
+- `org_name`: Organization name for the container registry (default: 'cloud37-ai')
 - `version_increment`: Version increment type (patch/minor/major) (default: 'patch')
 - `dockerfile_path`: Path to the Dockerfile (default: './Dockerfile')
 - `context_path`: Build context path (default: '.')
@@ -142,7 +142,7 @@ jobs:
       - uses: actions/checkout@v4
       
       - name: Build and Push Container
-        uses: xngen-ai/develop-build-deploy@v1
+        uses: cloud37-ai/develop-build-deploy@v2
         with:
           # Required inputs
           image_name: my-backend-app
